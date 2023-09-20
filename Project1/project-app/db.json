@@ -1,0 +1,29 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Krina",
+      "email": "k@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 2,
+      "name": "Dhruvin",
+      "email": "k@gmail.com",
+      "password":"167890"
+    },
+    {
+      "id": 3,
+      "name": "Hema",
+      "email": "k@gmail.com",
+      "password":"1234567"
+    },
+    {
+      "id": 4,
+      "name": "Harsukh",
+      "email": "k@gmail.com",
+      "password":"234567"
+    }
+  ]
+}
+ 
