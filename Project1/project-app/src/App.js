@@ -3,6 +3,7 @@ import { BrowserRouter,Routes,Route, Link } from 'react-router-dom';
 import "./Crud.css";
 import Userdata from './Userdata';
 import Adduser from './Adduser';
+import Userdetail from './Userdeatil';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
     <Routes>
       <Route path='/userdata' element={<Userdata/>}/>
       <Route path='/adduser' element={<Adduser/>}/>
+      <Route path='/userdetail/:userid' element={<Userdetail/>}/>
+
 
     </Routes>
     </BrowserRouter>

@@ -28,10 +28,15 @@ export default function Adduser() {
             console.log(result);
             result.json().then((resp)=>{
                 console.log(resp);
+                setEmail("")
+                setPassword("")
                 navigate("/userdata")
             })
+            
         })
+       
     }
+    
   return (
     <>
     <h1>Add User</h1>

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Crud.css";
 import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -8,6 +8,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Userdata() {
     const [userset,setUserset] = useState(null)
+    const navigate = useNavigate()
     useEffect(()=>{
         fetch("http://localhost:3030/user").then((data)=>{
             return data.json().then((resp)=> {
@@ -18,6 +19,10 @@ export default function Userdata() {
             })
         })
     },[])
+
+    const Detail = (id) => {
+        navigate("/userdetail/" + id)
+    }
   return (
     <>
     <h1>Userdata</h1>
@@ -35,7 +40,7 @@ export default function Userdata() {
         </tr>
       </MDBTableHead>
       <MDBTableBody align='middle'>
-        {
+      { 
             userset&&
             userset.map((item)=>
             <tr>
@@ -46,8 +51,9 @@ export default function Userdata() {
             <td>
                 <div>
             <MDBBtn color='primary' rounded size='sm'className='bt'>EDIT</MDBBtn>
-            <MDBBtn color='warning' rounded size='sm'className='bt'>REMOVE</MDBBtn>
             <MDBBtn color='danger' rounded size='sm'className='bt'>DELETE</MDBBtn>
+            <MDBBtn color='warning' rounded size='sm'className='bt' onClick={()=>Detail(item.id)}>DETAILS</MDBBtn>
+
             </div>
             </td>
             </tr>

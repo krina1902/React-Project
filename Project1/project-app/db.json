@@ -8,27 +8,51 @@
     },
     {
       "id": 2,
-      "name": "Dhruvin",
-      "email": "k@gmail.com",
-      "password": "167890"
+      "name": "Reshma ",
+      "email": "r@gmail.com",
+      "password": "123"
     },
     {
       "id": 3,
-      "name": "Hema",
-      "email": "k@gmail.com",
-      "password": "1234567"
+      "name": "",
+      "email": "d@",
+      "password": "goij;ok'ol"
     },
     {
       "id": 4,
-      "name": "Harsukh",
+      "name": "khushi",
       "email": "k@gmail.com",
-      "password": "234567"
+      "password": "1234"
     },
     {
-      "name": "Deep",
-      "email": "d@",
-      "password": "goij;ok'ol",
-      "id": 5
+      "id": 5,
+      "name": "rushi",
+      "email": "r@gmail.com",
+      "password": "345"
+    },
+    {
+      "id": 6,
+      "name": "neha",
+      "email": "n@gamil.com",
+      "password": "789"
+    },
+    {
+      "id": 7,
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": 8,
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": 9,
+      "name": "qwer",
+      "email": "qwert",
+      "password": "12345"
     }
   ]
 }
