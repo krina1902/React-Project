@@ -10,23 +10,23 @@
       "id": 2,
       "name": "Reshma ",
       "email": "r@gmail.com",
-      "password": "123"
+      "password": "123678"
     },
     {
       "id": 3,
-      "name": "",
-      "email": "d@",
-      "password": "goij;ok'ol"
+      "name": "roshan",
+      "email": "r@gmail.com",
+      "password": "7890"
     },
     {
       "id": 4,
-      "name": "khushi",
-      "email": "k@gmail.com",
-      "password": "1234"
+      "name": "Khushi",
+      "email": "khushi@gmail.com",
+      "password": "123489"
     },
     {
       "id": 5,
-      "name": "rushi",
+      "name": "Rushi",
       "email": "r@gmail.com",
       "password": "345"
     },

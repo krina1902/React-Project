@@ -20,6 +20,10 @@ export default function Userdata() {
         })
     },[])
 
+    const Edit = (id) => {
+      navigate("/useredit/" + id)
+  }
+
     const Detail = (id) => {
         navigate("/userdetail/" + id)
     }
@@ -50,7 +54,7 @@ export default function Userdata() {
             <td>{item.password}</td>
             <td>
                 <div>
-            <MDBBtn color='primary' rounded size='sm'className='bt'>EDIT</MDBBtn>
+            <MDBBtn color='primary' rounded size='sm'className='bt' onClick={()=>Edit(item.id)}>EDIT</MDBBtn>
             <MDBBtn color='danger' rounded size='sm'className='bt'>DELETE</MDBBtn>
             <MDBBtn color='warning' rounded size='sm'className='bt' onClick={()=>Detail(item.id)}>DETAILS</MDBBtn>
 

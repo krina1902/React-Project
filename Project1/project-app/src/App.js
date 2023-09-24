@@ -4,6 +4,7 @@ import "./Crud.css";
 import Userdata from './Userdata';
 import Adduser from './Adduser';
 import Userdetail from './Userdeatil';
+import Useredit from './Useredit';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Route path='/userdata' element={<Userdata/>}/>
       <Route path='/adduser' element={<Adduser/>}/>
       <Route path='/userdetail/:userid' element={<Userdetail/>}/>
+      <Route path='/useredit/:userid' element={<Useredit/>}/>
+
 
 
     </Routes>
