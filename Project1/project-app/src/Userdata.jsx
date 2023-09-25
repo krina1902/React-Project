@@ -27,6 +27,21 @@ export default function Userdata() {
     const Detail = (id) => {
         navigate("/userdetail/" + id)
     }
+
+    const Delete = (id) => {
+      if(window.confirm("Do You Want Delete User ?")){
+        fetch("http://localhost:3030/user/" + id,{
+          method:"DELETE"
+      }).then((result)=>{
+          window.location.reload();
+          alert("User Delete Successfully!!!!")
+          }).catch((error)=>{
+            console.log(error.msg);
+          })
+          
+      }
+      }
+
   return (
     <>
     <h1>Userdata</h1>
@@ -55,7 +70,7 @@ export default function Userdata() {
             <td>
                 <div>
             <MDBBtn color='primary' rounded size='sm'className='bt' onClick={()=>Edit(item.id)}>EDIT</MDBBtn>
-            <MDBBtn color='danger' rounded size='sm'className='bt'>DELETE</MDBBtn>
+            <MDBBtn color='danger' rounded size='sm'className='bt' onClick={()=> Delete(item.id)}>DELETE</MDBBtn>
             <MDBBtn color='warning' rounded size='sm'className='bt' onClick={()=>Detail(item.id)}>DETAILS</MDBBtn>
 
             </div>
