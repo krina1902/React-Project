@@ -1,0 +1,17 @@
+.logo{
+    width: 120px;
+}
+.search{
+    width: 2000px ;
+    margin: 0 20px;
+}
+
+.icon{
+   padding: 0 10px 0 50px;
+   font-size: 15px;
+}
+.stext h5{
+    font-size: 70px;
+    text-align: right;
+    margin: 10px 10px 0 0;
+}
