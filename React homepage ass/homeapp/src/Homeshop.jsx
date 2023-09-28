@@ -25,7 +25,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import './shop.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas,faHeart, faCodeCompare, faUser } from '@fortawesome/free-solid-svg-icons'
+import { fas,faHeart, faCodeCompare, faUser,faGift,faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 
 
@@ -38,7 +38,8 @@ export default function Homeshop() {
   return (
     <>
      <MDBContainer breakpoint="xl">
-    <MDBNavbar expand='lg' light bgColor='light' >
+        <div className='bgimg'>
+    <MDBNavbar expand='lg'  >
       <MDBContainer fluid >
         <MDBNavbarBrand href='#'><img src={logo} className='logo'></img></MDBNavbarBrand>
          
@@ -87,6 +88,46 @@ export default function Homeshop() {
       </MDBContainer>
       </MDBNavbar>
       {/*------------------------------------------------------  */}
+
+
+      <MDBNavbar expand='lg'>
+    
+          <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+          <MDBBtn className='me-1' color='success'>
+        Browse All Catagories
+      </MDBBtn>
+      <MDBNavbarItem>
+              <MDBNavbarLink href='#'><FontAwesomeIcon icon={faGift} /> HotDeals</MDBNavbarLink>
+            </MDBNavbarItem>
+            
+            <MDBNavbarItem>
+              <MDBNavbarLink  aria-current='page' href='#'>
+                Home
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='#'>About</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='#'>Shop</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='#'>Vendors</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='#'>Blog</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='#'>Pages</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink href='#'>Contact</MDBNavbarLink>
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+          <FontAwesomeIcon icon={faPhone} style={{color: "#1b8d3d",} } size="2xl" className='ms-auto' /> 1900888 24/7support
+
+    </MDBNavbar>
+      {/*------------------------------------------------------  */}
       <MDBCarousel showControls showIndicators dark fade>
       <MDBCarouselItem
         className='w-100 d-block stext'
@@ -103,6 +144,8 @@ export default function Homeshop() {
       </MDBCarouselItem>
 
     </MDBCarousel>
+
+    </div>
     </MDBContainer>
 
     </>
