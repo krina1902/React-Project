@@ -23,7 +23,7 @@ function Register() {
     const navigate = useNavigate()
 
     function userregister(){
-        let data = {id,name,email,password}
+        let data = {id,name,email,password,role:2}
         fetch("http://localhost:4000/users",{
             method:"POST",
             headers : {

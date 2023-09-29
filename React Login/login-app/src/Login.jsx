@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -11,8 +11,33 @@ import {
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const [user,setUser] = useState()
+  const[password , setPassword] = useState()
+  const navigate = useNavigate()
+
+  const login = () => {
+    fetch("http://localhost:4000/users?name=" + user).then((result)=>{
+      result.json().then((resp)=>{
+        console.log(resp);
+        if(resp[0]){
+          sessionStorage.setItem("name",user)
+          sessionStorage.setItem("role",resp[0].role)
+          if(resp[0].role == 1){
+            navigate("/admin")
+          }
+          else{
+            navigate("/")
+          }
+        }
+        else{
+          alert("invalid user")
+        }
+      })
+    })
+  }
   return (
     <MDBContainer fluid className='my-2 w-70'>
 
@@ -26,17 +51,14 @@ function Login() {
 
               
                 <MDBCol>
-                  <MDBInput wrapperClass='mb-4' label='Name' id='form1' type='text'/>
+                  <MDBInput value={user} onChange={(e)=>setUser(e.target.value)} wrapperClass='mb-4' label='Name' id='form1' type='text'/>
                 </MDBCol>
 
-               
-
-              <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
-              <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
+              <MDBInput value={password} onChange={(e)=>setPassword(e.target.value)}  wrapperClass='mb-4' label='Password' id='form4' type='password'/>
 
               
 
-              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md' onClick={login}>sign up</MDBBtn>
 
 
             </MDBCardBody>

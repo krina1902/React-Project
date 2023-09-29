@@ -2,26 +2,23 @@
   "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Krina",
+      "email": "krina@gmail.com",
+      "password": "1234",
+      "role": 1
     },
     {
       "id": 2,
-      "name": "rita",
-      "email": "",
-      "password": ""
+      "name": "Dhruvin",
+      "email": "d@gmail.com",
+      "password": "sgxv"
     },
     {
       "id": 3,
-      "name": "rina",
-      "email": "wer",
-      "password": "2345"
-    },
-    {
-      "id": 4,
-      "name": "Reshma",
-      "email": "r@gmail.com",
-      "password": "567"
+      "name": "data",
+      "email": "data2@gmail.com",
+      "password": "123",
+      "role": 2
     }
   ]
 }
