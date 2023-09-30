@@ -6,6 +6,7 @@ import Register from "./Register";
 import Login from "./Login";
 import Admin from "./Admin";
 import Adminedit from "./Adminedit";
+import Admindetail from "./Admindetails";
 
 
 
@@ -29,6 +30,10 @@ const Mainrouter = createBrowserRouter([
     {
         path:"/adminedit/:userid" ,
         element:<><Navbar /><Adminedit /></>
+    },
+    {
+        path:"/admindetail/:userid" ,
+        element:<><Navbar /><Admindetail /></>
     }
 ])
 export default Mainrouter;

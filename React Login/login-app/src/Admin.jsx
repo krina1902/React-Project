@@ -25,7 +25,7 @@ export default function Admin() {
   }
 
     const Detail = (id) => {
-        navigate("/userdetail/" + id)
+        navigate("/admindetail/" + id)
     }
 
     const Delete = (id) => {
