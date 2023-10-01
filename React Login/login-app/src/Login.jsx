@@ -23,7 +23,18 @@ function Login() {
   },[])
 
   const login = () => {
-    fetch("http://localhost:4000/users?name=" + user).then((result)=>{
+
+
+    // fetch("http://localhost:4000/users?password=" + password).then((result)=>{
+    //   result.json().then((resp)=>{
+    //     console.log(resp);
+    //   })
+    // })
+
+    
+    
+
+    fetch(`http://localhost:4000/users?user=${user}&password=${password}`).then((result)=>{
       result.json().then((resp)=>{
         console.log(resp);
         if(resp[0]){
