@@ -7,8 +7,19 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Admin() {
+
+  let user = sessionStorage.getItem("name")
+  let role = sessionStorage.getItem("role")
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    if(user === "" || user === null || role != 1){
+      navigate("/login")
+    }
+  })
+
+
     const [userset,setUserset] = useState(null)
-    const navigate = useNavigate()
     useEffect(()=>{
         fetch("http://localhost:4000/users").then((data)=>{
             return data.json().then((resp)=> {

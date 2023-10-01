@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -17,6 +17,10 @@ function Login() {
   const [user,setUser] = useState()
   const[password , setPassword] = useState()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    sessionStorage.clear()
+  },[])
 
   const login = () => {
     fetch("http://localhost:4000/users?name=" + user).then((result)=>{
