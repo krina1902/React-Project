@@ -34,7 +34,7 @@ function Login() {
     
     
 
-    fetch(`http://localhost:4000/users?user=${user}&password=${password}`).then((result)=>{
+    fetch(`http://localhost:4000/users?name=${user}&password=${password}`).then((result)=>{
       result.json().then((resp)=>{
         console.log(resp);
         if(resp[0]){
