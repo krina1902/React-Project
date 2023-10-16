@@ -43,6 +43,11 @@ export default function Navbar() {
                   <Link to="/register">Register</Link>
                 </MDBNavbarLink>
               </MDBNavbarItem>
+              <MDBNavbarItem className='active'>
+                <MDBNavbarLink aria-current='page'>
+                  <Link to="/bussiness">Bussiness</Link>
+                </MDBNavbarLink>
+              </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBContainer>
