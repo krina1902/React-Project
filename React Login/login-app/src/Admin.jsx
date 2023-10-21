@@ -2,7 +2,9 @@
 import React, { useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "./Crud.css";
-import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody,  MDBContainer,
+  MDBNavbar,
+  MDBInputGroup } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -11,6 +13,7 @@ export default function Admin() {
   let user = sessionStorage.getItem("name")
   let role = sessionStorage.getItem("role")
   const navigate = useNavigate()
+  
 
   useEffect(()=>{
     if(user === "" || user === null || role != 1){
@@ -30,6 +33,8 @@ export default function Admin() {
             })
         })
     },[])
+
+    const [query , setQuery] = useState("")
 
     const Edit = (id) => {
       navigate("/adminedit/" + id)
@@ -61,6 +66,9 @@ export default function Admin() {
       <tr>
       <td><Link to="/register"><MDBBtn color='primary' rounded size='sm'className='bt'>Add User</MDBBtn></Link></td>
       </tr>
+      <tr>
+          <input  placeholder="Search" type='Search' onChange={e => setQuery(e.target.value)} />
+      </tr>
         <tr>
           <th scope='col'>ID</th>
           <th scope='col'>NAME</th>
@@ -72,7 +80,7 @@ export default function Admin() {
       <MDBTableBody align='middle'>
       { 
             userset&&
-            userset.map((item)=>
+            userset.filter((item)=> item.name.toLowerCase().includes(query) || item.email.toLowerCase().includes(query)).map((item)=>
             <tr>
             <td>{item.id}</td>
             <td>{item.name}</td>
