@@ -26,6 +26,13 @@
       "email": "k@gmail.com",
       "password": "123",
       "role": 2
+    },
+    {
+      "id": 5,
+      "name": "Disha",
+      "email": "Kakkar",
+      "password": "1234",
+      "role": 2
     }
   ]
 }
