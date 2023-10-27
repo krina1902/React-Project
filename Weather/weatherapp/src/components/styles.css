@@ -1,82 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
-
-.main{
-    margin: 10px;
+.container{
+    height: 500px;
+    width: 400px;
+    margin: 30px auto;
+    background: linear-gradient(rgb(103, 103, 238),rgb(36, 36, 139),rgb(3, 3, 45));
     border-radius: 20px;
-    background-color: #01579b;
 }
 
-.top{
-    height: 60px;
-    background-color: #424242;
-    color: whitesmoke;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
-    display: flex;
-    justify-content: space-between;
+.items{
+    text-align: center;
 }
 
-.header{
-    background-color: #424242;
-    color: whitesmoke;
-    margin: 10px 0px 0px 10px;
-    font-size: 25px;
-    border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
+.city{
+    border: none;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 .button{
-    width: 35px;
-    height: 35px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px 15px;
+    margin: 0 0 0 10px;
 }
-
-.day{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-}
-
 .temp{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 18px;
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    margin: 40px 0;
 }
-
-.flex{
-    display: flex;
-    justify-content: space-between;
+.location{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    margin: 70px 0 20px 0;
 }
-
-.sunrise-sunset{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 16px;
+.country{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    margin: 20px 0;
 }
-
-.description{
-    padding: 15px;
-    color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+.humidity,.hum{
+    display:inline;
+    font-size: 30px;
+    color: darkcyan;
 }
-
-.forecast{
-    border-radius: 20px;
-    background-color: #01579b;
-    color: whitesmoke;
-    padding: 10px;
-    margin: 10px;
-    font-family: 'Recursive', sans-serif;
-    font-size: 19px;
+.wi,.wind{
+    display:inline;
+    font-size: 30px;
+    color: darkcyan;
 }
-
-.flex-forecast{
-    display: flex;
-    justify-content: space-between;
+.sunr,.sunrise{
+    display:inline;
+    font-size: 30px;
+    color: darkcyan;
+}
+.suns,.sunset{
+    display:inline;
+    font-size: 30px;
+    color: darkcyan;
 }
