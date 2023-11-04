@@ -1,0 +1,15 @@
+.box{
+    background-color: chocolate;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.squ{
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+    border-radius: 20%;
+    margin: 0 auto;
+
+}
